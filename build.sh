@@ -1,29 +1,13 @@
 #!/bin/bash
 
-#
-# Copyright (C) 2022 GeoPD <geoemmanuelpd2001@gmail.com>
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
 # User
-GIT_USER="GeoPD"
+GIT_USER="motoonepower"
 
 # Email
-GIT_EMAIL="geoemmanuelpd2001@gmail.com"
+GIT_EMAIL="rushiacc1@protonmail.com"
 
 # Local manifest
-LOCAL_MANIFEST=https://${TOKEN}@github.com/geopd/local_manifests
+LOCAL_MANIFEST=https://${TOKEN}@github.com/motoonepower/local_manifests
 
 # ROM Manifest and Branch
 rom() {
@@ -45,13 +29,13 @@ rom() {
 # Build command for rom
 build_command() {
 	case "${NAME}" in
-		"AEX-12") lunch aosp_sakura-user && m aex -j20
+		"AEX-12") lunch aosp_chef-user && m aex -j20
 		;;
-		"Crdroid-12") lunch lineage_sakura-user && m bacon -j20
+		"Crdroid-12") lunch lineage_chef-user && m bacon -j20
 		;;
-		"dot12.1") lunch dot_sakura-user && m bacon -j20
+		"dot12.1") lunch dot_chef-user && m bacon -j20
 		;;
-		"Evox-12") lunch evolution_sakura-user && m evolution -j20
+		"Evox-12") lunch evolution_chef-user && m evolution -j20
 		;;
 		*) echo "Build commands need to be added!"
 		exit 1
@@ -62,9 +46,9 @@ build_command() {
 # Export tree paths
 tree_path() {
 	# Device,vendor & kernel Tree paths
-	DEVICE_TREE=device/xiaomi/sakura
-	VENDOR_TREE=vendor/xiaomi
-	KERNEL_TREE=kernel/xiaomi/msm8953
+	DEVICE_TREE=device/motorola
+	VENDOR_TREE=vendor/motorola
+	KERNEL_TREE=kernel/motorola/msm8998
 }
 
 # Clone needed misc scripts and ssh priv keys
