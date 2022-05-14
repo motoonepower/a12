@@ -7,7 +7,7 @@ GIT_USER="motoonepower"
 GIT_EMAIL="rushiacc1@protonmail.com"
 
 # Local manifest
-LOCAL_MANIFEST=https://${TOKEN}@github.com/motoonepower/local_manifests
+LOCAL_MANIFEST=https://github.com/rushiranpise/local_manifest
 
 # ROM Manifest and Branch
 rom() {
