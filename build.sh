@@ -31,11 +31,11 @@ build_command() {
 	case "${NAME}" in
 		"AEX-12") lunch aosp_chef-user && m aex -j20
 		;;
-		"Crdroid-12") lunch lineage_chef-user && m bacon -j20
+		"Crdroid-12") lunch lineage_chef-user && mka bacon -j20
 		;;
-		"dot12.1") lunch dot_chef-user && m bacon -j20
+		"dot12.1") lunch dot_chef-user && mka bacon -j20
 		;;
-		"Evox-12") lunch evolution_chef-user && m evolution -j20
+		"Evox-12") lunch evolution_chef-user && mka evolution -j20
 		;;
 		*) echo "Build commands need to be added!"
 		exit 1
@@ -46,7 +46,7 @@ build_command() {
 # Export tree paths
 tree_path() {
 	# Device,vendor & kernel Tree paths
-	DEVICE_TREE=device/motorola
+	DEVICE_TREE=device/motorola/chef
 	VENDOR_TREE=vendor/motorola
 	KERNEL_TREE=kernel/motorola/msm8998
 }
